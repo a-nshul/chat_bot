@@ -138,37 +138,6 @@
     let currentChatId = null;
 
     // Function to render chat history
-// function renderChatHistory() {
-//     const chatHistoryDiv = document.getElementById('chatHistory');
-//     chatHistoryDiv.innerHTML = ''; 
-
-//     chatHistory.forEach((item, index) => {
-//         const div = document.createElement('div');
-//         div.classList.add('flex', 'items-center', 'justify-between'); 
-
-//         // Check if the message exists and render the correct message
-//         const messageText = item.messages && item.messages.length > 0 ? item.messages[0].text : "No Message";
-//         const messageDiv = document.createElement('div');
-//         messageDiv.textContent = `${item.sender === 'user' ? 'You' : 'Bot'}: ${messageText}`;
-//         messageDiv.classList.add(item.sender === 'user' ? 'text-blue-500' : 'text-green-500');
-//         messageDiv.classList.add('cursor-pointer');
-//         messageDiv.setAttribute('data-chat-id', index);
-//         messageDiv.addEventListener('click', () => loadChatHistory(index));
-
-//         // Add delete button
-//         const deleteButton = document.createElement('button');
-//         deleteButton.innerHTML = '🗑️'; 
-//         deleteButton.classList.add('text-red-500', 'ml-4', 'hover:text-red-700', 'transition', 'duration-200');
-//         deleteButton.addEventListener('click', (e) => {
-//             e.stopPropagation();
-//             deleteChat(index); 
-//         });
-
-//         div.appendChild(messageDiv);
-//         div.appendChild(deleteButton);
-//         chatHistoryDiv.appendChild(div);
-//     });
-// }
 function renderChatHistory() {
     const chatHistoryDiv = document.getElementById('chatHistory');
     chatHistoryDiv.innerHTML = ''; 
@@ -295,15 +264,6 @@ function sendMessage() {
 }
 
     // Append message to chat area
-    // function appendMessage(text, sender) {
-    //     const messageArea = document.getElementById('messageArea');
-    //     const messageDiv = document.createElement('div');
-    //     messageDiv.classList.add(sender === 'user' ? 'text-blue-500' : 'text-green-500');
-    //     messageDiv.textContent = text;
-    //     messageDiv.classList.add('message-enter');
-    //     messageArea.appendChild(messageDiv);
-    //     messageArea.scrollTop = messageArea.scrollHeight;
-    // }
     function appendMessage(text, sender) {
     const messageArea = document.getElementById('messageArea');
     const messageDiv = document.createElement('div');
